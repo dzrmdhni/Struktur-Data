@@ -1,0 +1,16 @@
+#include <iostream>
+
+using namespace std;
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int var = 5;
+
+    cout<<"Nilai dari a adalah: "<<var<<endl;
+    cout<<"Alamar dari a adalah: "<<&var<<endl;
+
+    return 0;
+}
