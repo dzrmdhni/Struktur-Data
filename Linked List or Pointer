@@ -1,39 +1,41 @@
-#include <bits/stdc++.h>
+#include <cstddef>
+#include <iostream>
 
 using namespace std;
 
-    class nodeType
-    {
-        public:
-        int data; 
-        struct nodeType *next;
-    };
-    
-    void push(nodeType** head_ref, int new_data)  
-{  
-    nodeType* new_node = new nodeType(); 
+class Node {
+    public:
+        int data;
+    Node * next;
+};
 
-    new_node->data = new_data;  
-    
-    new_node->next = (*head_ref);  
-    
-    (*head_ref) = new_node;  
-}  
+//void print_list(Node * n) {
+    //while (n != NULL) {
+        //cout << n->data << " ";
+        //n = n->next;
 
-    void printList(nodeType *node)  
-{  
-    while (node != NULL)  
-    {  
-        cout<<" "<<node->data;  
-        node = node->next;  
-    }  
-}  
+int main() {
+    Node * head = NULL;
+    Node * second = NULL;
+    Node * third = NULL;
+
+    head = new Node();
+    cin>>head->data;
+    head->next = NULL;
+    cout << head->data;
+    return 0;
     
-int main()
-{
-    nodeType* head = NULL;
-    push(&head, 7); 
+    //second = new Node();
+    //third = new Node();
+
+    //head->data = 1;
+    //head->next = second;
+
+    //second-> data = 2;
+    //second-> next = third;
+
+    //third-> data = 3;
+    //third-> next = NULL;
     
-    printList(head);
+    //print_list(head);
 }
-
