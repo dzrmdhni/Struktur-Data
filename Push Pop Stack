@@ -14,7 +14,8 @@ int main()
     mystack.pop(); 
     mystack.pop(); 
   
-    while (!mystack.empty()) { 
+    while (!mystack.empty()) 
+    { 
         cout << "Elemen dalam stack adalah: " << mystack.top()<<endl; 
         mystack.pop(); 
         elm++;
