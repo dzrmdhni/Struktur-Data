@@ -1,0 +1,26 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+int main() 
+{
+int NumList[13] = {21, 83, 42, 11, 10, 9, 3, 20, 12, 27, 15, 92, 2};
+int Swap;
+cout<<"Data sebelum diurutkan: \n";
+for(int ctr=0; ctr<13; ctr++)
+{
+cout<< setw( 3 ) <<NumList[ctr];
+}
+cout<<"\n\n";
+for(int i=0; i<12; i++)
+for(int ii=0; ii<12; ii++)
+if (NumList[ii] > NumList[ii + 1])
+{
+Swap = NumList[ii];
+NumList[ii] = NumList[ii + 1];
+NumList[ii + 1] = Swap;
+}
+cout<<"Data setelah diurutkan: \n";
+for (int iii=0; iii<13; iii++)
+cout<< setw( 3 ) << NumList[iii];
+cout<< endl <<endl;
+}
