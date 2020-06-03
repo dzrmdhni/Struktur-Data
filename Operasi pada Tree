@@ -1,0 +1,20 @@
+#include <iostream>
+
+using namespace std;
+
+int Tree;
+
+tree = NULL;
+
+int isEmpty (Tree *tree){
+    if(tree == NULL) return 1;
+    else return 0;
+}
+
+struct Node{
+     int data;
+     Node *kiri;
+     Node *kanan;
+};
+
+
