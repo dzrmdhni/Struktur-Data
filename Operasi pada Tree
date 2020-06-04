@@ -1,20 +1,40 @@
 #include <iostream>
-
 using namespace std;
+int main()
 
-int Tree;
+{
+    typedef struct node {
+    	int data;
+	    struct node* left;
+	    struct node* right;
+    } *ptnode;
 
-tree = NULL;
-
-int isEmpty (Tree *tree){
-    if(tree == NULL) return 1;
-    else return 0;
+    //CEK EMPTY TREE
+    int isEmpty (node *tree)
+        {
+         if(tree == NULL) return 1;
+         else return 0;
+        }
+    
+    //INSERT TREE
+    void insert(node **root,int newNode)
+    {
+        if((*root) == NULL)
+        {  
+            node *newData;
+            newData = new Tree;
+            newData->data = newNode;
+            newData->left = NULL; 
+            newData->right = NULL;
+            (*root) = newData;
+            (*root)->left = NULL;
+            (*root)->right = NULL;
+            
+        } 
+        else if(newNode < (*root)->data) 
+                insert(&(*root)->left,newNode);
+        else if(newNode > (*root)->data)
+                insert(&(*root)->right,newNode);
+    }
 }
-
-struct Node{
-     int data;
-     Node *kiri;
-     Node *kanan;
-};
-
 
